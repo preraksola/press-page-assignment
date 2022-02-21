@@ -1,13 +1,8 @@
 import axios from "axios";
 
-const GIT_TOKEN = "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";
-
 axios.interceptors.request.use(
 	function (config) {
-		config.auth = {
-			username: "prerak6962",
-			password: GIT_TOKEN
-		};
+		//TODO Add GitHub API token to increase per hour API request threshold
 		return config;
 	},
 	function (error) {
